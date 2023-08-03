@@ -3,7 +3,6 @@ from telegram.ext import CallbackContext
 from telegram import Update
 from .models import User
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
-from time import sleep
 CHANNELS = [("Siz buni blarmidingiz", -1001928509371, 'https://t.me/siz_buni_blarmidingiz')]
 # Create your views here.
 
