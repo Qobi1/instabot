@@ -80,14 +80,25 @@ WSGI_APPLICATION = 'simplebot.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': "simple",
+#         'USER': "simplebot1",
+#         'PASSWORD': 'simple',
+#         'HOST': '127.0.0.1',
+#         'PORT': '5432',
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': "simple",
-        'USER': "simplebot1",
-        'PASSWORD': 'simple',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'NAME': "railway",
+        'USER': "postgres",
+        'PASSWORD': 'cKHq4EKX6kjKohwttg8c',
+        'HOST': 'containers-us-west-72.railway.app',
+        'PORT': '6494',
     }
 }
 
