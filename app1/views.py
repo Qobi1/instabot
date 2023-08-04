@@ -114,3 +114,4 @@ async def inline_handler(update: Update, context: CallbackContext):
                                             reply_markup=InlineKeyboardMarkup(btn))
             return 0
         await update.callback_query.message.reply_text(text(user.language, 5, client))
+        await update.callback_query.message.reply_text(text(user.language, 7, client))
