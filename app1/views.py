@@ -34,7 +34,7 @@ def text(language, command, user=None):
             4: "🤔ushbu botdan foydalanishni davom ettirish uchun homiylarimizning kanallariga obuna boʻlishingiz kerak\n\nUlar tufayli bizning botimiz mutlaqo bepul va sizdan hech qanday sarmoya talab qilmaydi!\n\nObuna boʻlgandan soʻng 'Подписался' tugmasini bosing.",
             5: "Xizmat ishga tushdi, Instagramni 24 soat ichida tekshiring.",
             6: "Siz hali barcha kanalarga obuna bo'lmadingiz!",
-            7: "Suniy Intelektda yaratilgan bot tez, oson va qulay. \n\nSinab ko'ring: <a href='https://t.me/chatgpt_officia1_bot'>ChatGPT-3</a>"
+            # 7: "Suniy Intelektda yaratilgan bot tez, oson va qulay. \n\nSinab ko'ring: <a href='https://t.me/chatgpt_officia1_bot'>ChatGPT-3</a>"
         },
         "rus": {
             1: f"Привет, {user.first_name}\nЭто секретный бот с помощью которого, ты сможешь подключить те самые функции!\n\nХочешь, чтобы бот приступил к работе?\nТогда нажимай 'start'",
@@ -43,7 +43,7 @@ def text(language, command, user=None):
             4: "🤔Упс.. чтобы продолжить пользоваться данным ботом, необходимо подписаться на каналы наших спонсоров\n\nБлагодаря им наш бот абсолютно бесплатный и не требует какого либо вложения средств с твоей стороны!\n\nПосле подписки жми кнопку 'Подписался'",
             5: "Сервис начал работу, проверьте Инстаграм в течении 24час.",
             6: "Вы еще не подписаны на все каналы!",
-            7: "Бот, построенный на искусственном интеллекте, быстрый, простой и удобный. \n\nПопробуйте: <a href='https://t.me/chatgpt_officia1_bot'>ChatGPT-3</a>"
+            # 7: "Бот, построенный на искусственном интеллекте, быстрый, простой и удобный. \n\nПопробуйте: <a href='https://t.me/chatgpt_officia1_bot'>ChatGPT-3</a>"
         }
     }
     return dict[language][command]
@@ -114,4 +114,4 @@ async def inline_handler(update: Update, context: CallbackContext):
                                             reply_markup=InlineKeyboardMarkup(btn))
             return 0
         await update.callback_query.message.reply_text(text(user.language, 5, client))
-        await update.callback_query.message.reply_text(text(user.language, 7, client), parse_mode='HTML')
+        # await update.callback_query.message.reply_text(text(user.language, 7, client), parse_mode='HTML')
