@@ -83,27 +83,27 @@ WSGI_APPLICATION = 'simplebot.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': "simple",
-#         'USER': "simplebot1",
-#         'PASSWORD': 'simple',
-#         'HOST': '127.0.0.1',
-#         'PORT': '5432',
-#     }
-# }
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': "railway",
-        'USER': "postgres",
-        'PASSWORD': 'oG1ZEETckwQaQjRGOFka',
-        'HOST': 'containers-us-west-82.railway.app',
-        'PORT': '7496',
+        'NAME': "simple",
+        'USER': "simplebot1",
+        'PASSWORD': 'simple',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': "railway",
+#         'USER': "postgres",
+#         'PASSWORD': 'oG1ZEETckwQaQjRGOFka',
+#         'HOST': 'containers-us-west-82.railway.app',
+#         'PORT': '7496',
+#     }
+# }
 
 os.environ["DJANGO_ALLOW_ASYNC_UNSAFE"] = "true"
 # Password validation
