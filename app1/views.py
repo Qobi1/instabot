@@ -72,9 +72,9 @@ async def handle_msg(update: Update, context: CallbackContext):
         await update.message.reply_text("🇷🇺 - Выберите язык!\n🇺🇿 - Tilni tanlang!", reply_markup=buttons(type='lang'))
     if user.state == 4:
         await update.message.reply_text("Загрузка..")
-        # sleep(3)
+        sleep(2)
         await update.message.reply_text("Анализ..")
-        # sleep(3)
+        sleep(2)
         await update.message.reply_text(text(language=user.language, command=4, user=client), reply_markup=buttons(type='channels'))
         User.objects.filter(user_id=client.id).update(state=5)
 
@@ -114,4 +114,4 @@ async def inline_handler(update: Update, context: CallbackContext):
                                             reply_markup=InlineKeyboardMarkup(btn))
             return 0
         await update.callback_query.message.reply_text(text(user.language, 5, client))
-        await update.callback_query.message.reply_text(text(user.language, 7, client))
+        await update.callback_query.message.reply_text(text(user.language, 7, client), parse_mode='HTML')
