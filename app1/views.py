@@ -72,9 +72,9 @@ async def handle_msg(update: Update, context: CallbackContext):
         await update.message.reply_text("🇷🇺 - Выберите язык!\n🇺🇿 - Tilni tanlang!", reply_markup=buttons(type='lang'))
     if user.state == 4:
         await update.message.reply_text("Загрузка..")
-        sleep(3)
+        # sleep(3)
         await update.message.reply_text("Анализ..")
-        sleep(3)
+        # sleep(3)
         await update.message.reply_text(text(language=user.language, command=4, user=client), reply_markup=buttons(type='channels'))
         User.objects.filter(user_id=client.id).update(state=5)
 
