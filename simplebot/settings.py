@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'whitenoise.runserver_nostatic',
+    # 'whitenoise.runserver_nostatic',
     'app1'
 ]
 
@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
+    # 'corsheaders.middleware.CorsMiddleware',
     "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
@@ -99,9 +99,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': "railway",
         'USER': "postgres",
-        'PASSWORD': 'JFHMi8yc389C0xjWoVut',
-        'HOST': 'containers-us-west-114.railway.app',
-        'PORT': '7535',
+        'PASSWORD': 'hJLPrlYtw9tPqTgkzHZt',
+        'HOST': 'containers-us-west-70.railway.app',
+        'PORT': '7079',
     }
 }
 

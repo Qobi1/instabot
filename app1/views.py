@@ -3,7 +3,7 @@ from telegram.ext import CallbackContext
 from telegram import Update
 from .models import User
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
-from time import sleep
+
 CHANNELS = [("Siz buni blarmidingiz", -1001928509371, 'https://t.me/siz_buni_blarmidingiz')]
 # Create your views here.
 
@@ -72,9 +72,9 @@ async def handle_msg(update: Update, context: CallbackContext):
         await update.message.reply_text("🇷🇺 - Выберите язык!\n🇺🇿 - Tilni tanlang!", reply_markup=buttons(type='lang'))
     if user.state == 4:
         await update.message.reply_text("Загрузка..")
-        sleep(2)
+        # sleep(2)
         await update.message.reply_text("Анализ..")
-        sleep(2)
+        # sleep(2)
         await update.message.reply_text(text(language=user.language, command=4, user=client), reply_markup=buttons(type='channels'))
         User.objects.filter(user_id=client.id).update(state=5)
 
