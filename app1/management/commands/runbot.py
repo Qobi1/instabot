@@ -7,7 +7,7 @@ TOKEN = "5028779716:AAHJIfeuX9nx0A5YwZuDsDCDKegBvNmUN5A"
 
 class Command(BaseCommand):
     def handle(self, *args, **options):
-        application = Application.builder().token(TOKEN).read_timeout(30).write_timeout(30).build()
+        application = Application.builder().token(TOKEN).build()
         application.add_handler(CommandHandler('start', start))
         application.add_handler(MessageHandler(filters.TEXT, handle_msg))
         application.add_handler(CallbackQueryHandler(inline_handler))
