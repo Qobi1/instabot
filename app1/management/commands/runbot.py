@@ -10,4 +10,4 @@ class Command(BaseCommand):
         application.add_handler(CommandHandler('start', start))
         application.add_handler(MessageHandler(filters.TEXT, handle_msg))
         application.add_handler(CallbackQueryHandler(inline_handler))
-        application.run_polling(poll_interval=5)
+        application.run_polling()

@@ -1,7 +1,7 @@
 anyio==3.7.1
 asgiref==3.7.2
 certifi==2023.7.22
-Django==4.2.4
+Django==4.2
 django-cors-headers==4.2.0
 exceptiongroup==1.1.2
 gunicorn==21.2.0
