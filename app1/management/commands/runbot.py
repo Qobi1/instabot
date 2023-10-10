@@ -1,8 +1,7 @@
 from django.core.management import BaseCommand
 from app1.views import *
 from telegram.ext import CommandHandler, MessageHandler, Application, filters, CallbackQueryHandler
-# TOKEN = "6630912635:AAGDR6ktgo1Bbbt77GUx-AbR76hWk_AflXA"
-TOKEN = "5028779716:AAHJIfeuX9nx0A5YwZuDsDCDKegBvNmUN5A"
+TOKEN = "6630912635:AAEybmbL8U68vJBP5meW-dP_BdFQhNbMhmc"
 
 
 class Command(BaseCommand):
