@@ -1,7 +1,7 @@
 from django.core.management import BaseCommand
 from app1.views import *
 from telegram.ext import CommandHandler, MessageHandler, Application, filters, CallbackQueryHandler, ApplicationBuilder
-TOKEN = "5028779716:AAHJIfeuX9nx0A5YwZuDsDCDKegBvNmUN5A"
+from simplebot.settings import TOKEN
 
 
 class Command(BaseCommand):
